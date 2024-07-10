@@ -1,0 +1,13 @@
+
+node0.h
+NODE_ID 0
+dt0
+connectcosts0
+mincosts0
+findmincosts0
+sendcosts0
+rtinit0
+printdt0
+rtupdate0
+linkhandler0
+
