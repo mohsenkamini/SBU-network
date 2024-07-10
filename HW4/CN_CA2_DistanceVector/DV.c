@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 #include "DV.h"
 
 #include "node0.h"
@@ -144,7 +145,7 @@ void init() {
     struct event *evptr;
 
     printf("Enter TRACE: ");
-    scanf_s("%d", &TRACE);
+    scanf("%d", &TRACE);
 
     srand(9999);               /* init random number generator */
     sum = 0.0;                 /* test random number generator for students */
