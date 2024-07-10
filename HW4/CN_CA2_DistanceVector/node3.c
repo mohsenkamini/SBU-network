@@ -9,10 +9,10 @@
 
 
 // Link costs to directly connected neighbours used for initializing the distance table.
-int connectcosts3[4] = { 0, 1, 999, 7 };
+int connectcosts3[4] = { 7, 32, 7, 0 };
 
 // Minimum costs to all nodes, initially set to same as connectcosts
-int mincosts3[4] = { 0, 1, 999, 7 };
+int mincosts3[4] = { 7, 32, 7, 0 };
 
 struct distance_table dt3;
 
@@ -152,7 +152,7 @@ void rtupdate3(struct rtpkt *rcvdpkt) {
 void printdt3() {
     printf("------------------------\n");
     printf("                via     \n");
-    printf("   D0 |    1     2    3 \n");
+    printf("   D3 |    1     2    3 \n");
     printf("------|-----------------\n");
     printf("     1|  %3d   %3d   %3d\n", dt3.costs[1][1], dt3.costs[1][2], dt3.costs[1][3]);
     printf("dest 2|  %3d   %3d   %3d\n", dt3.costs[2][1], dt3.costs[2][2], dt3.costs[2][3]);

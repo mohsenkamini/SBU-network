@@ -1,0 +1,1646 @@
+Enter TRACE:     TOLAYER2: source: 0, dest: 1
+              costs:0  1  999  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 1.870574
+    TOLAYER2: source: 0, dest: 3
+              costs:0  1  999  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 1.641910
+------------------------
+                via     
+   D0 |    1     2    3 
+------|-----------------
+     1|    1   999   999
+dest 2|  999   999   999
+     3|  999   999     7
+------------------------
+    TOLAYER2: source: 1, dest: 0
+              costs:1  0  54  32  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 0.946640
+    TOLAYER2: source: 1, dest: 2
+              costs:1  0  54  32  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 0.992243
+    TOLAYER2: source: 1, dest: 3
+              costs:1  0  54  32  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 2.165707
+------------------------
+                via     
+   D1 |    1     2    3 
+------|-----------------
+     1|    0   999   999
+dest 2|  999    54   999
+     3|  999   999    32
+------------------------
+    TOLAYER2: source: 2, dest: 1
+              costs:0  1  999  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 3.285052
+    TOLAYER2: source: 2, dest: 3
+              costs:0  1  999  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 3.106066
+------------------------
+                via     
+   D2 |    1     2    3 
+------|-----------------
+     1|   54   999   999
+dest 2|  999     0   999
+     3|  999   999     7
+------------------------
+    TOLAYER2: source: 3, dest: 0
+              costs:7  32  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 1.209223
+    TOLAYER2: source: 3, dest: 1
+              costs:7  32  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 4.981971
+    TOLAYER2: source: 3, dest: 2
+              costs:7  32  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 1.247804
+------------------------
+                via     
+   D3 |    1     2    3 
+------|-----------------
+     1|   32   999   999
+dest 2|  999     7   999
+     3|  999   999     0
+------------------------
+MAIN: rcv event, t=0.947, at 0 src: 1, dest: 0, contents:   1   0  54  32
+----------
+rtupdate0 srcid: 1
+rtupdate0 destid: 0
+rtupdate0 mincosts: 1 0 54 32 
+----------
+i 0 matches NODE_ID 0. Skipping.
+i 1 matches sourceid 1. Skipping.
+dt0.costs[i][srcid]: 999
+connectcosts0[srcid]: 1
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 55
+dt0.costs[i][srcid]: 999
+connectcosts0[srcid]: 1
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 33
+----------
+dt0 was updated. New table below.
+
+------------------------
+                via     
+   D0 |    1     2    3 
+------|-----------------
+     1|    1   999   999
+dest 2|   55   999   999
+     3|   33   999     7
+------------------------
+dt0update mincosts0: 0 1 55 7 
+dt0update sending out new min costs.
+    TOLAYER2: source: 0, dest: 1
+              costs:0  1  55  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.946640
+            INSERTEVENT: future time will be 5.208748
+    TOLAYER2: source: 0, dest: 3
+              costs:0  1  55  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.946640
+            INSERTEVENT: future time will be 3.977461
+MAIN: rcv event, t=0.992, at 2 src: 1, dest: 2, contents:   1   0  54  32
+----------
+rtupdate2 srcid: 1
+rtupdate2 destid: 2
+rtupdate2 mincosts: 1 0 54 32 
+----------
+dt2.costs[i][srcid]: 999
+connectcosts2[srcid]: 54
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 55
+i 1 matches sourceid 1. Skipping.
+i 2 matches NODE_ID 2. Skipping.
+dt2.costs[i][srcid]: 999
+connectcosts2[srcid]: 54
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 86
+----------
+dt2 was updated. New table below.
+
+------------------------
+                via     
+   D2 |    1     2    3 
+------|-----------------
+     1|   54   999   999
+dest 2|  999     0   999
+     3|   86   999     7
+------------------------
+dt2update mincosts2: 0 1 999 7 
+dt2update sending out new min costs.
+    TOLAYER2: source: 2, dest: 1
+              costs:0  1  999  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.992243
+            INSERTEVENT: future time will be 7.040867
+    TOLAYER2: source: 2, dest: 3
+              costs:0  1  999  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.992243
+            INSERTEVENT: future time will be 4.747964
+MAIN: rcv event, t=1.209, at 0 src: 3, dest: 0, contents:   7  32   7   0
+----------
+rtupdate0 srcid: 3
+rtupdate0 destid: 0
+rtupdate0 mincosts: 7 32 7 0 
+----------
+i 0 matches NODE_ID 0. Skipping.
+dt0.costs[i][srcid]: 999
+connectcosts0[srcid]: 7
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 39
+dt0.costs[i][srcid]: 999
+connectcosts0[srcid]: 7
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 14
+i 3 matches sourceid 3. Skipping.
+----------
+dt0 was updated. New table below.
+
+------------------------
+                via     
+   D0 |    1     2    3 
+------|-----------------
+     1|    1   999    39
+dest 2|   55   999    14
+     3|   33   999     7
+------------------------
+dt0update mincosts0: 0 1 14 7 
+dt0update sending out new min costs.
+    TOLAYER2: source: 0, dest: 1
+              costs:0  1  14  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 1.209223
+            INSERTEVENT: future time will be 7.107360
+    TOLAYER2: source: 0, dest: 3
+              costs:0  1  14  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 1.209223
+            INSERTEVENT: future time will be 5.630293
+MAIN: rcv event, t=1.248, at 2 src: 3, dest: 2, contents:   7  32   7   0
+----------
+rtupdate2 srcid: 3
+rtupdate2 destid: 2
+rtupdate2 mincosts: 7 32 7 0 
+----------
+dt2.costs[i][srcid]: 999
+connectcosts2[srcid]: 7
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 14
+dt2.costs[i][srcid]: 999
+connectcosts2[srcid]: 7
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 39
+i 2 matches NODE_ID 2. Skipping.
+i 3 matches sourceid 3. Skipping.
+----------
+dt2 was updated. New table below.
+
+------------------------
+                via     
+   D2 |    1     2    3 
+------|-----------------
+     1|   54   999    39
+dest 2|  999     0   999
+     3|   86   999     7
+------------------------
+dt2update mincosts2: 0 1 999 7 
+dt2update sending out new min costs.
+    TOLAYER2: source: 2, dest: 1
+              costs:0  1  999  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 1.247804
+            INSERTEVENT: future time will be 7.213675
+    TOLAYER2: source: 2, dest: 3
+              costs:0  1  999  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 1.247804
+            INSERTEVENT: future time will be 6.488828
+MAIN: rcv event, t=1.642, at 3 src: 0, dest: 3, contents:   0   1 999   7
+----------
+rtupdate3 srcid: 0
+rtupdate3 destid: 3
+rtupdate3 mincosts: 0 1 999 7 
+----------
+i 0 matches sourceid 0. Skipping.
+dt3.costs[i][srcid]: 999
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 8
+node 0 has not yet established a path to node 2. Skipping.
+i 3 matches NODE_ID 3. Skipping.
+----------
+dt3 was updated. New table below.
+
+------------------------
+                via     
+   D3 |    1     2    3 
+------|-----------------
+     1|   32   999   999
+dest 2|  999     7   999
+     3|  999   999     0
+------------------------
+dt3update mincosts3: 7 8 7 0 
+dt3update sending out new min costs.
+    TOLAYER2: source: 3, dest: 0
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 1.641910
+            INSERTEVENT: future time will be 3.514894
+    TOLAYER2: source: 3, dest: 1
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 1.641910
+            INSERTEVENT: future time will be 8.163060
+    TOLAYER2: source: 3, dest: 2
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 1.641910
+            INSERTEVENT: future time will be 2.819335
+MAIN: rcv event, t=1.871, at 1 src: 0, dest: 1, contents:   0   1 999   7
+----------
+rtupdate1 srcid: 0
+rtupdate1 destid: 1
+rtupdate1 mincosts: 0 1 999 7 
+----------
+i 0 matches sourceid 0. Skipping.
+i 1 matches NODE_ID 1. Skipping.
+node 0 has not yet established a path to node 2. Skipping.
+dt1.costs[i][srcid]: 999
+connectcosts1[srcid]: 1
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 8
+----------
+dt1 was updated. New table below.
+
+------------------------
+                via     
+   D1 |    1     2    3 
+------|-----------------
+     1|    0   999   999
+dest 2|  999    54   999
+     3|  999   999    32
+------------------------
+dt1update mincosts1: 1 0 54 8 
+dt1update sending out new min costs.
+    TOLAYER2: source: 1, dest: 0
+              costs:1  0  54  8  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 1.870574
+            INSERTEVENT: future time will be 4.951097
+    TOLAYER2: source: 1, dest: 2
+              costs:1  0  54  8  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 1.870574
+            INSERTEVENT: future time will be 3.531034
+    TOLAYER2: source: 1, dest: 3
+              costs:1  0  54  8  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 1.870574
+            INSERTEVENT: future time will be 7.606528
+MAIN: rcv event, t=2.166, at 3 src: 1, dest: 3, contents:   1   0  54  32
+----------
+rtupdate3 srcid: 1
+rtupdate3 destid: 3
+rtupdate3 mincosts: 1 0 54 32 
+----------
+dt3.costs[i][srcid]: 999
+connectcosts3[srcid]: 32
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 33
+i 1 matches sourceid 1. Skipping.
+dt3.costs[i][srcid]: 999
+connectcosts3[srcid]: 32
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 86
+i 3 matches NODE_ID 3. Skipping.
+----------
+dt3 was updated. New table below.
+
+------------------------
+                via     
+   D3 |    1     2    3 
+------|-----------------
+     1|   32   999   999
+dest 2|   86     7   999
+     3|  999   999     0
+------------------------
+dt3update mincosts3: 7 8 7 0 
+dt3update sending out new min costs.
+    TOLAYER2: source: 3, dest: 0
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 2.165707
+            INSERTEVENT: future time will be 6.733022
+    TOLAYER2: source: 3, dest: 1
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 2.165707
+            INSERTEVENT: future time will be 8.547558
+    TOLAYER2: source: 3, dest: 2
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 2.165707
+            INSERTEVENT: future time will be 5.009821
+MAIN: rcv event, t=2.819, at 2 src: 3, dest: 2, contents:   7   8   7   0
+----------
+rtupdate2 srcid: 3
+rtupdate2 destid: 2
+rtupdate2 mincosts: 7 8 7 0 
+----------
+dt2.costs[i][srcid]: 14
+connectcosts2[srcid]: 7
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 14
+dt2.costs[i][srcid]: 39
+connectcosts2[srcid]: 7
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 15
+i 2 matches NODE_ID 2. Skipping.
+i 3 matches sourceid 3. Skipping.
+----------
+dt2 was updated. New table below.
+
+------------------------
+                via     
+   D2 |    1     2    3 
+------|-----------------
+     1|   54   999    15
+dest 2|  999     0   999
+     3|   86   999     7
+------------------------
+dt2update mincosts2: 0 1 999 7 
+dt2update sending out new min costs.
+    TOLAYER2: source: 2, dest: 1
+              costs:0  1  999  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 2.819335
+            INSERTEVENT: future time will be 9.228358
+    TOLAYER2: source: 2, dest: 3
+              costs:0  1  999  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 2.819335
+            INSERTEVENT: future time will be 7.910159
+MAIN: rcv event, t=3.106, at 3 src: 2, dest: 3, contents:   0   1 999   7
+----------
+rtupdate3 srcid: 2
+rtupdate3 destid: 3
+rtupdate3 mincosts: 0 1 999 7 
+----------
+dt3.costs[i][srcid]: 999
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 7
+dt3.costs[i][srcid]: 999
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 8
+i 2 matches sourceid 2. Skipping.
+i 3 matches NODE_ID 3. Skipping.
+----------
+dt3 was updated. New table below.
+
+------------------------
+                via     
+   D3 |    1     2    3 
+------|-----------------
+     1|   32     8   999
+dest 2|   86     7   999
+     3|  999   999     0
+------------------------
+dt3update mincosts3: 7 8 7 0 
+dt3update sending out new min costs.
+    TOLAYER2: source: 3, dest: 0
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 3.106066
+            INSERTEVENT: future time will be 7.269223
+    TOLAYER2: source: 3, dest: 1
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 3.106066
+            INSERTEVENT: future time will be 10.245425
+    TOLAYER2: source: 3, dest: 2
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 3.106066
+            INSERTEVENT: future time will be 5.184026
+MAIN: rcv event, t=3.285, at 1 src: 2, dest: 1, contents:   0   1 999   7
+----------
+rtupdate1 srcid: 2
+rtupdate1 destid: 1
+rtupdate1 mincosts: 0 1 999 7 
+----------
+dt1.costs[i][srcid]: 999
+connectcosts1[srcid]: 54
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 54
+i 1 matches NODE_ID 1. Skipping.
+i 2 matches sourceid 2. Skipping.
+dt1.costs[i][srcid]: 999
+connectcosts1[srcid]: 54
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 61
+----------
+dt1 was updated. New table below.
+
+------------------------
+                via     
+   D1 |    1     2    3 
+------|-----------------
+     1|    0   999   999
+dest 2|  999    54   999
+     3|  999    61    32
+------------------------
+dt1update mincosts1: 1 0 54 8 
+dt1update sending out new min costs.
+    TOLAYER2: source: 1, dest: 0
+              costs:1  0  54  8  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 3.285052
+            INSERTEVENT: future time will be 7.447333
+    TOLAYER2: source: 1, dest: 2
+              costs:1  0  54  8  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 3.285052
+            INSERTEVENT: future time will be 7.147733
+    TOLAYER2: source: 1, dest: 3
+              costs:1  0  54  8  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 3.285052
+            INSERTEVENT: future time will be 9.076608
+MAIN: rcv event, t=3.515, at 0 src: 3, dest: 0, contents:   7   8   7   0
+----------
+rtupdate0 srcid: 3
+rtupdate0 destid: 0
+rtupdate0 mincosts: 7 8 7 0 
+----------
+i 0 matches NODE_ID 0. Skipping.
+dt0.costs[i][srcid]: 39
+connectcosts0[srcid]: 7
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 15
+dt0.costs[i][srcid]: 14
+connectcosts0[srcid]: 7
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 14
+i 3 matches sourceid 3. Skipping.
+----------
+dt0 was updated. New table below.
+
+------------------------
+                via     
+   D0 |    1     2    3 
+------|-----------------
+     1|    1   999    15
+dest 2|   55   999    14
+     3|   33   999     7
+------------------------
+dt0update mincosts0: 0 1 14 7 
+dt0update sending out new min costs.
+    TOLAYER2: source: 0, dest: 1
+              costs:0  1  14  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 3.514894
+            INSERTEVENT: future time will be 10.947332
+    TOLAYER2: source: 0, dest: 3
+              costs:0  1  14  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 3.514894
+            INSERTEVENT: future time will be 10.454793
+MAIN: rcv event, t=3.531, at 2 src: 1, dest: 2, contents:   1   0  54   8
+----------
+rtupdate2 srcid: 1
+rtupdate2 destid: 2
+rtupdate2 mincosts: 1 0 54 8 
+----------
+dt2.costs[i][srcid]: 55
+connectcosts2[srcid]: 54
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 55
+i 1 matches sourceid 1. Skipping.
+i 2 matches NODE_ID 2. Skipping.
+dt2.costs[i][srcid]: 86
+connectcosts2[srcid]: 54
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 62
+----------
+dt2 was updated. New table below.
+
+------------------------
+                via     
+   D2 |    1     2    3 
+------|-----------------
+     1|   54   999    15
+dest 2|  999     0   999
+     3|   62   999     7
+------------------------
+dt2update mincosts2: 0 1 999 7 
+dt2update sending out new min costs.
+    TOLAYER2: source: 2, dest: 1
+              costs:0  1  999  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 3.531034
+            INSERTEVENT: future time will be 11.054139
+    TOLAYER2: source: 2, dest: 3
+              costs:0  1  999  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 3.531034
+            INSERTEVENT: future time will be 11.419283
+MAIN: rcv event, t=3.977, at 3 src: 0, dest: 3, contents:   0   1  55   7
+----------
+rtupdate3 srcid: 0
+rtupdate3 destid: 3
+rtupdate3 mincosts: 0 1 55 7 
+----------
+i 0 matches sourceid 0. Skipping.
+dt3.costs[i][srcid]: 8
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 8
+dt3.costs[i][srcid]: 999
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 62
+i 3 matches NODE_ID 3. Skipping.
+----------
+dt3 was updated. New table below.
+
+------------------------
+                via     
+   D3 |    1     2    3 
+------|-----------------
+     1|   32     8   999
+dest 2|   86     7   999
+     3|  999   999     0
+------------------------
+dt3update mincosts3: 7 8 7 0 
+dt3update sending out new min costs.
+    TOLAYER2: source: 3, dest: 0
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 3.977461
+            INSERTEVENT: future time will be 8.522438
+    TOLAYER2: source: 3, dest: 1
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 3.977461
+            INSERTEVENT: future time will be 11.416507
+    TOLAYER2: source: 3, dest: 2
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 3.977461
+            INSERTEVENT: future time will be 8.339001
+MAIN: rcv event, t=4.748, at 3 src: 2, dest: 3, contents:   0   1 999   7
+----------
+rtupdate3 srcid: 2
+rtupdate3 destid: 3
+rtupdate3 mincosts: 0 1 999 7 
+----------
+dt3.costs[i][srcid]: 7
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 7
+dt3.costs[i][srcid]: 8
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 8
+i 2 matches sourceid 2. Skipping.
+i 3 matches NODE_ID 3. Skipping.
+----------
+MAIN: rcv event, t=4.951, at 0 src: 1, dest: 0, contents:   1   0  54   8
+----------
+rtupdate0 srcid: 1
+rtupdate0 destid: 0
+rtupdate0 mincosts: 1 0 54 8 
+----------
+i 0 matches NODE_ID 0. Skipping.
+i 1 matches sourceid 1. Skipping.
+dt0.costs[i][srcid]: 55
+connectcosts0[srcid]: 1
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 55
+dt0.costs[i][srcid]: 33
+connectcosts0[srcid]: 1
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 9
+----------
+dt0 was updated. New table below.
+
+------------------------
+                via     
+   D0 |    1     2    3 
+------|-----------------
+     1|    1   999    15
+dest 2|   55   999    14
+     3|    9   999     7
+------------------------
+dt0update mincosts0: 0 1 14 7 
+dt0update sending out new min costs.
+    TOLAYER2: source: 0, dest: 1
+              costs:0  1  14  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 4.951097
+            INSERTEVENT: future time will be 13.363007
+    TOLAYER2: source: 0, dest: 3
+              costs:0  1  14  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 4.951097
+            INSERTEVENT: future time will be 11.613770
+MAIN: rcv event, t=4.982, at 1 src: 3, dest: 1, contents:   7  32   7   0
+----------
+rtupdate1 srcid: 3
+rtupdate1 destid: 1
+rtupdate1 mincosts: 7 32 7 0 
+----------
+dt1.costs[i][srcid]: 999
+connectcosts1[srcid]: 32
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 39
+i 1 matches NODE_ID 1. Skipping.
+dt1.costs[i][srcid]: 999
+connectcosts1[srcid]: 32
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 39
+i 3 matches sourceid 3. Skipping.
+----------
+dt1 was updated. New table below.
+
+------------------------
+                via     
+   D1 |    1     2    3 
+------|-----------------
+     1|    0   999   999
+dest 2|  999    54    39
+     3|  999    61    32
+------------------------
+dt1update mincosts1: 1 0 39 8 
+dt1update sending out new min costs.
+    TOLAYER2: source: 1, dest: 0
+              costs:1  0  39  8  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 4.981971
+            INSERTEVENT: future time will be 10.484209
+    TOLAYER2: source: 1, dest: 2
+              costs:1  0  39  8  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 4.981971
+            INSERTEVENT: future time will be 8.351994
+    TOLAYER2: source: 1, dest: 3
+              costs:1  0  39  8  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 4.981971
+            INSERTEVENT: future time will be 12.690587
+MAIN: rcv event, t=5.010, at 2 src: 3, dest: 2, contents:   7   8   7   0
+----------
+rtupdate2 srcid: 3
+rtupdate2 destid: 2
+rtupdate2 mincosts: 7 8 7 0 
+----------
+dt2.costs[i][srcid]: 14
+connectcosts2[srcid]: 7
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 14
+dt2.costs[i][srcid]: 15
+connectcosts2[srcid]: 7
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 15
+i 2 matches NODE_ID 2. Skipping.
+i 3 matches sourceid 3. Skipping.
+----------
+MAIN: rcv event, t=5.184, at 2 src: 3, dest: 2, contents:   7   8   7   0
+----------
+rtupdate2 srcid: 3
+rtupdate2 destid: 2
+rtupdate2 mincosts: 7 8 7 0 
+----------
+dt2.costs[i][srcid]: 14
+connectcosts2[srcid]: 7
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 14
+dt2.costs[i][srcid]: 15
+connectcosts2[srcid]: 7
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 15
+i 2 matches NODE_ID 2. Skipping.
+i 3 matches sourceid 3. Skipping.
+----------
+MAIN: rcv event, t=5.209, at 1 src: 0, dest: 1, contents:   0   1  55   7
+----------
+rtupdate1 srcid: 0
+rtupdate1 destid: 1
+rtupdate1 mincosts: 0 1 55 7 
+----------
+i 0 matches sourceid 0. Skipping.
+i 1 matches NODE_ID 1. Skipping.
+dt1.costs[i][srcid]: 999
+connectcosts1[srcid]: 1
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 56
+dt1.costs[i][srcid]: 8
+connectcosts1[srcid]: 1
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 8
+----------
+dt1 was updated. New table below.
+
+------------------------
+                via     
+   D1 |    1     2    3 
+------|-----------------
+     1|    0   999   999
+dest 2|  999    54    39
+     3|  999    61    32
+------------------------
+dt1update mincosts1: 1 0 39 8 
+dt1update sending out new min costs.
+    TOLAYER2: source: 1, dest: 0
+              costs:1  0  39  8  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 5.208748
+            INSERTEVENT: future time will be 10.552296
+    TOLAYER2: source: 1, dest: 2
+              costs:1  0  39  8  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 5.208748
+            INSERTEVENT: future time will be 9.223520
+    TOLAYER2: source: 1, dest: 3
+              costs:1  0  39  8  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 5.208748
+            INSERTEVENT: future time will be 13.640387
+MAIN: rcv event, t=5.630, at 3 src: 0, dest: 3, contents:   0   1  14   7
+----------
+rtupdate3 srcid: 0
+rtupdate3 destid: 3
+rtupdate3 mincosts: 0 1 14 7 
+----------
+i 0 matches sourceid 0. Skipping.
+dt3.costs[i][srcid]: 8
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 8
+dt3.costs[i][srcid]: 62
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 21
+i 3 matches NODE_ID 3. Skipping.
+----------
+dt3 was updated. New table below.
+
+------------------------
+                via     
+   D3 |    1     2    3 
+------|-----------------
+     1|   32     8   999
+dest 2|   86     7   999
+     3|  999   999     0
+------------------------
+dt3update mincosts3: 7 8 7 0 
+dt3update sending out new min costs.
+    TOLAYER2: source: 3, dest: 0
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 5.630293
+            INSERTEVENT: future time will be 11.569766
+    TOLAYER2: source: 3, dest: 1
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 5.630293
+            INSERTEVENT: future time will be 13.411959
+    TOLAYER2: source: 3, dest: 2
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 5.630293
+            INSERTEVENT: future time will be 9.609524
+MAIN: rcv event, t=6.489, at 3 src: 2, dest: 3, contents:   0   1 999   7
+----------
+rtupdate3 srcid: 2
+rtupdate3 destid: 3
+rtupdate3 mincosts: 0 1 999 7 
+----------
+dt3.costs[i][srcid]: 7
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 7
+dt3.costs[i][srcid]: 8
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 8
+i 2 matches sourceid 2. Skipping.
+i 3 matches NODE_ID 3. Skipping.
+----------
+MAIN: rcv event, t=6.733, at 0 src: 3, dest: 0, contents:   7   8   7   0
+----------
+rtupdate0 srcid: 3
+rtupdate0 destid: 0
+rtupdate0 mincosts: 7 8 7 0 
+----------
+i 0 matches NODE_ID 0. Skipping.
+dt0.costs[i][srcid]: 15
+connectcosts0[srcid]: 7
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 15
+dt0.costs[i][srcid]: 14
+connectcosts0[srcid]: 7
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 14
+i 3 matches sourceid 3. Skipping.
+----------
+MAIN: rcv event, t=7.041, at 1 src: 2, dest: 1, contents:   0   1 999   7
+----------
+rtupdate1 srcid: 2
+rtupdate1 destid: 1
+rtupdate1 mincosts: 0 1 999 7 
+----------
+dt1.costs[i][srcid]: 54
+connectcosts1[srcid]: 54
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 54
+i 1 matches NODE_ID 1. Skipping.
+i 2 matches sourceid 2. Skipping.
+dt1.costs[i][srcid]: 61
+connectcosts1[srcid]: 54
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 61
+----------
+MAIN: rcv event, t=7.107, at 1 src: 0, dest: 1, contents:   0   1  14   7
+----------
+rtupdate1 srcid: 0
+rtupdate1 destid: 1
+rtupdate1 mincosts: 0 1 14 7 
+----------
+i 0 matches sourceid 0. Skipping.
+i 1 matches NODE_ID 1. Skipping.
+dt1.costs[i][srcid]: 56
+connectcosts1[srcid]: 1
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 15
+dt1.costs[i][srcid]: 8
+connectcosts1[srcid]: 1
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 8
+----------
+dt1 was updated. New table below.
+
+------------------------
+                via     
+   D1 |    1     2    3 
+------|-----------------
+     1|    0   999   999
+dest 2|  999    54    39
+     3|  999    61    32
+------------------------
+dt1update mincosts1: 1 0 15 8 
+dt1update sending out new min costs.
+    TOLAYER2: source: 1, dest: 0
+              costs:1  0  15  8  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 7.107360
+            INSERTEVENT: future time will be 13.298935
+    TOLAYER2: source: 1, dest: 2
+              costs:1  0  15  8  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 7.107360
+            INSERTEVENT: future time will be 10.776176
+    TOLAYER2: source: 1, dest: 3
+              costs:1  0  15  8  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 7.107360
+            INSERTEVENT: future time will be 13.808315
+MAIN: rcv event, t=7.148, at 2 src: 1, dest: 2, contents:   1   0  54   8
+----------
+rtupdate2 srcid: 1
+rtupdate2 destid: 2
+rtupdate2 mincosts: 1 0 54 8 
+----------
+dt2.costs[i][srcid]: 55
+connectcosts2[srcid]: 54
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 55
+i 1 matches sourceid 1. Skipping.
+i 2 matches NODE_ID 2. Skipping.
+dt2.costs[i][srcid]: 62
+connectcosts2[srcid]: 54
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 62
+----------
+MAIN: rcv event, t=7.214, at 1 src: 2, dest: 1, contents:   0   1 999   7
+----------
+rtupdate1 srcid: 2
+rtupdate1 destid: 1
+rtupdate1 mincosts: 0 1 999 7 
+----------
+dt1.costs[i][srcid]: 54
+connectcosts1[srcid]: 54
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 54
+i 1 matches NODE_ID 1. Skipping.
+i 2 matches sourceid 2. Skipping.
+dt1.costs[i][srcid]: 61
+connectcosts1[srcid]: 54
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 61
+----------
+MAIN: rcv event, t=7.269, at 0 src: 3, dest: 0, contents:   7   8   7   0
+----------
+rtupdate0 srcid: 3
+rtupdate0 destid: 0
+rtupdate0 mincosts: 7 8 7 0 
+----------
+i 0 matches NODE_ID 0. Skipping.
+dt0.costs[i][srcid]: 15
+connectcosts0[srcid]: 7
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 15
+dt0.costs[i][srcid]: 14
+connectcosts0[srcid]: 7
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 14
+i 3 matches sourceid 3. Skipping.
+----------
+MAIN: rcv event, t=7.447, at 0 src: 1, dest: 0, contents:   1   0  54   8
+----------
+rtupdate0 srcid: 1
+rtupdate0 destid: 0
+rtupdate0 mincosts: 1 0 54 8 
+----------
+i 0 matches NODE_ID 0. Skipping.
+i 1 matches sourceid 1. Skipping.
+dt0.costs[i][srcid]: 55
+connectcosts0[srcid]: 1
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 55
+dt0.costs[i][srcid]: 9
+connectcosts0[srcid]: 1
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 9
+----------
+MAIN: rcv event, t=7.607, at 3 src: 1, dest: 3, contents:   1   0  54   8
+----------
+rtupdate3 srcid: 1
+rtupdate3 destid: 3
+rtupdate3 mincosts: 1 0 54 8 
+----------
+dt3.costs[i][srcid]: 33
+connectcosts3[srcid]: 32
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 33
+i 1 matches sourceid 1. Skipping.
+dt3.costs[i][srcid]: 86
+connectcosts3[srcid]: 32
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 86
+i 3 matches NODE_ID 3. Skipping.
+----------
+MAIN: rcv event, t=7.910, at 3 src: 2, dest: 3, contents:   0   1 999   7
+----------
+rtupdate3 srcid: 2
+rtupdate3 destid: 3
+rtupdate3 mincosts: 0 1 999 7 
+----------
+dt3.costs[i][srcid]: 7
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 7
+dt3.costs[i][srcid]: 8
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 8
+i 2 matches sourceid 2. Skipping.
+i 3 matches NODE_ID 3. Skipping.
+----------
+MAIN: rcv event, t=8.163, at 1 src: 3, dest: 1, contents:   7   8   7   0
+----------
+rtupdate1 srcid: 3
+rtupdate1 destid: 1
+rtupdate1 mincosts: 7 8 7 0 
+----------
+dt1.costs[i][srcid]: 39
+connectcosts1[srcid]: 32
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 39
+i 1 matches NODE_ID 1. Skipping.
+dt1.costs[i][srcid]: 39
+connectcosts1[srcid]: 32
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 39
+i 3 matches sourceid 3. Skipping.
+----------
+MAIN: rcv event, t=8.339, at 2 src: 3, dest: 2, contents:   7   8   7   0
+----------
+rtupdate2 srcid: 3
+rtupdate2 destid: 2
+rtupdate2 mincosts: 7 8 7 0 
+----------
+dt2.costs[i][srcid]: 14
+connectcosts2[srcid]: 7
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 14
+dt2.costs[i][srcid]: 15
+connectcosts2[srcid]: 7
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 15
+i 2 matches NODE_ID 2. Skipping.
+i 3 matches sourceid 3. Skipping.
+----------
+MAIN: rcv event, t=8.352, at 2 src: 1, dest: 2, contents:   1   0  39   8
+----------
+rtupdate2 srcid: 1
+rtupdate2 destid: 2
+rtupdate2 mincosts: 1 0 39 8 
+----------
+dt2.costs[i][srcid]: 55
+connectcosts2[srcid]: 54
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 55
+i 1 matches sourceid 1. Skipping.
+i 2 matches NODE_ID 2. Skipping.
+dt2.costs[i][srcid]: 62
+connectcosts2[srcid]: 54
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 62
+----------
+MAIN: rcv event, t=8.522, at 0 src: 3, dest: 0, contents:   7   8   7   0
+----------
+rtupdate0 srcid: 3
+rtupdate0 destid: 0
+rtupdate0 mincosts: 7 8 7 0 
+----------
+i 0 matches NODE_ID 0. Skipping.
+dt0.costs[i][srcid]: 15
+connectcosts0[srcid]: 7
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 15
+dt0.costs[i][srcid]: 14
+connectcosts0[srcid]: 7
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 14
+i 3 matches sourceid 3. Skipping.
+----------
+MAIN: rcv event, t=8.548, at 1 src: 3, dest: 1, contents:   7   8   7   0
+----------
+rtupdate1 srcid: 3
+rtupdate1 destid: 1
+rtupdate1 mincosts: 7 8 7 0 
+----------
+dt1.costs[i][srcid]: 39
+connectcosts1[srcid]: 32
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 39
+i 1 matches NODE_ID 1. Skipping.
+dt1.costs[i][srcid]: 39
+connectcosts1[srcid]: 32
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 39
+i 3 matches sourceid 3. Skipping.
+----------
+MAIN: rcv event, t=9.077, at 3 src: 1, dest: 3, contents:   1   0  54   8
+----------
+rtupdate3 srcid: 1
+rtupdate3 destid: 3
+rtupdate3 mincosts: 1 0 54 8 
+----------
+dt3.costs[i][srcid]: 33
+connectcosts3[srcid]: 32
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 33
+i 1 matches sourceid 1. Skipping.
+dt3.costs[i][srcid]: 86
+connectcosts3[srcid]: 32
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 86
+i 3 matches NODE_ID 3. Skipping.
+----------
+MAIN: rcv event, t=9.224, at 2 src: 1, dest: 2, contents:   1   0  39   8
+----------
+rtupdate2 srcid: 1
+rtupdate2 destid: 2
+rtupdate2 mincosts: 1 0 39 8 
+----------
+dt2.costs[i][srcid]: 55
+connectcosts2[srcid]: 54
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 55
+i 1 matches sourceid 1. Skipping.
+i 2 matches NODE_ID 2. Skipping.
+dt2.costs[i][srcid]: 62
+connectcosts2[srcid]: 54
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 62
+----------
+MAIN: rcv event, t=9.228, at 1 src: 2, dest: 1, contents:   0   1 999   7
+----------
+rtupdate1 srcid: 2
+rtupdate1 destid: 1
+rtupdate1 mincosts: 0 1 999 7 
+----------
+dt1.costs[i][srcid]: 54
+connectcosts1[srcid]: 54
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 54
+i 1 matches NODE_ID 1. Skipping.
+i 2 matches sourceid 2. Skipping.
+dt1.costs[i][srcid]: 61
+connectcosts1[srcid]: 54
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 61
+----------
+MAIN: rcv event, t=9.610, at 2 src: 3, dest: 2, contents:   7   8   7   0
+----------
+rtupdate2 srcid: 3
+rtupdate2 destid: 2
+rtupdate2 mincosts: 7 8 7 0 
+----------
+dt2.costs[i][srcid]: 14
+connectcosts2[srcid]: 7
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 14
+dt2.costs[i][srcid]: 15
+connectcosts2[srcid]: 7
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 15
+i 2 matches NODE_ID 2. Skipping.
+i 3 matches sourceid 3. Skipping.
+----------
+MAIN: rcv event, t=10.245, at 1 src: 3, dest: 1, contents:   7   8   7   0
+----------
+rtupdate1 srcid: 3
+rtupdate1 destid: 1
+rtupdate1 mincosts: 7 8 7 0 
+----------
+dt1.costs[i][srcid]: 39
+connectcosts1[srcid]: 32
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 39
+i 1 matches NODE_ID 1. Skipping.
+dt1.costs[i][srcid]: 39
+connectcosts1[srcid]: 32
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 39
+i 3 matches sourceid 3. Skipping.
+----------
+MAIN: rcv event, t=10.455, at 3 src: 0, dest: 3, contents:   0   1  14   7
+----------
+rtupdate3 srcid: 0
+rtupdate3 destid: 3
+rtupdate3 mincosts: 0 1 14 7 
+----------
+i 0 matches sourceid 0. Skipping.
+dt3.costs[i][srcid]: 8
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 8
+dt3.costs[i][srcid]: 21
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 21
+i 3 matches NODE_ID 3. Skipping.
+----------
+MAIN: rcv event, t=10.484, at 0 src: 1, dest: 0, contents:   1   0  39   8
+----------
+rtupdate0 srcid: 1
+rtupdate0 destid: 0
+rtupdate0 mincosts: 1 0 39 8 
+----------
+i 0 matches NODE_ID 0. Skipping.
+i 1 matches sourceid 1. Skipping.
+dt0.costs[i][srcid]: 55
+connectcosts0[srcid]: 1
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 40
+dt0.costs[i][srcid]: 9
+connectcosts0[srcid]: 1
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 9
+----------
+dt0 was updated. New table below.
+
+------------------------
+                via     
+   D0 |    1     2    3 
+------|-----------------
+     1|    1   999    15
+dest 2|   40   999    14
+     3|    9   999     7
+------------------------
+dt0update mincosts0: 0 1 14 7 
+dt0update sending out new min costs.
+    TOLAYER2: source: 0, dest: 1
+              costs:0  1  14  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 10.484209
+            INSERTEVENT: future time will be 13.525625
+    TOLAYER2: source: 0, dest: 3
+              costs:0  1  14  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 10.484209
+            INSERTEVENT: future time will be 14.453755
+MAIN: rcv event, t=10.552, at 0 src: 1, dest: 0, contents:   1   0  39   8
+----------
+rtupdate0 srcid: 1
+rtupdate0 destid: 0
+rtupdate0 mincosts: 1 0 39 8 
+----------
+i 0 matches NODE_ID 0. Skipping.
+i 1 matches sourceid 1. Skipping.
+dt0.costs[i][srcid]: 40
+connectcosts0[srcid]: 1
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 40
+dt0.costs[i][srcid]: 9
+connectcosts0[srcid]: 1
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 9
+----------
+MAIN: rcv event, t=10.776, at 2 src: 1, dest: 2, contents:   1   0  15   8
+----------
+rtupdate2 srcid: 1
+rtupdate2 destid: 2
+rtupdate2 mincosts: 1 0 15 8 
+----------
+dt2.costs[i][srcid]: 55
+connectcosts2[srcid]: 54
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 55
+i 1 matches sourceid 1. Skipping.
+i 2 matches NODE_ID 2. Skipping.
+dt2.costs[i][srcid]: 62
+connectcosts2[srcid]: 54
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 62
+----------
+MAIN: rcv event, t=10.947, at 1 src: 0, dest: 1, contents:   0   1  14   7
+----------
+rtupdate1 srcid: 0
+rtupdate1 destid: 1
+rtupdate1 mincosts: 0 1 14 7 
+----------
+i 0 matches sourceid 0. Skipping.
+i 1 matches NODE_ID 1. Skipping.
+dt1.costs[i][srcid]: 15
+connectcosts1[srcid]: 1
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 15
+dt1.costs[i][srcid]: 8
+connectcosts1[srcid]: 1
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 8
+----------
+MAIN: rcv event, t=11.054, at 1 src: 2, dest: 1, contents:   0   1 999   7
+----------
+rtupdate1 srcid: 2
+rtupdate1 destid: 1
+rtupdate1 mincosts: 0 1 999 7 
+----------
+dt1.costs[i][srcid]: 54
+connectcosts1[srcid]: 54
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 54
+i 1 matches NODE_ID 1. Skipping.
+i 2 matches sourceid 2. Skipping.
+dt1.costs[i][srcid]: 61
+connectcosts1[srcid]: 54
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 61
+----------
+MAIN: rcv event, t=11.417, at 1 src: 3, dest: 1, contents:   7   8   7   0
+----------
+rtupdate1 srcid: 3
+rtupdate1 destid: 1
+rtupdate1 mincosts: 7 8 7 0 
+----------
+dt1.costs[i][srcid]: 39
+connectcosts1[srcid]: 32
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 39
+i 1 matches NODE_ID 1. Skipping.
+dt1.costs[i][srcid]: 39
+connectcosts1[srcid]: 32
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 39
+i 3 matches sourceid 3. Skipping.
+----------
+MAIN: rcv event, t=11.419, at 3 src: 2, dest: 3, contents:   0   1 999   7
+----------
+rtupdate3 srcid: 2
+rtupdate3 destid: 3
+rtupdate3 mincosts: 0 1 999 7 
+----------
+dt3.costs[i][srcid]: 7
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 7
+dt3.costs[i][srcid]: 8
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 8
+i 2 matches sourceid 2. Skipping.
+i 3 matches NODE_ID 3. Skipping.
+----------
+MAIN: rcv event, t=11.570, at 0 src: 3, dest: 0, contents:   7   8   7   0
+----------
+rtupdate0 srcid: 3
+rtupdate0 destid: 0
+rtupdate0 mincosts: 7 8 7 0 
+----------
+i 0 matches NODE_ID 0. Skipping.
+dt0.costs[i][srcid]: 15
+connectcosts0[srcid]: 7
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 15
+dt0.costs[i][srcid]: 14
+connectcosts0[srcid]: 7
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 14
+i 3 matches sourceid 3. Skipping.
+----------
+MAIN: rcv event, t=11.614, at 3 src: 0, dest: 3, contents:   0   1  14   7
+----------
+rtupdate3 srcid: 0
+rtupdate3 destid: 3
+rtupdate3 mincosts: 0 1 14 7 
+----------
+i 0 matches sourceid 0. Skipping.
+dt3.costs[i][srcid]: 8
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 8
+dt3.costs[i][srcid]: 21
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 21
+i 3 matches NODE_ID 3. Skipping.
+----------
+MAIN: rcv event, t=12.691, at 3 src: 1, dest: 3, contents:   1   0  39   8
+----------
+rtupdate3 srcid: 1
+rtupdate3 destid: 3
+rtupdate3 mincosts: 1 0 39 8 
+----------
+dt3.costs[i][srcid]: 33
+connectcosts3[srcid]: 32
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 33
+i 1 matches sourceid 1. Skipping.
+dt3.costs[i][srcid]: 86
+connectcosts3[srcid]: 32
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 71
+i 3 matches NODE_ID 3. Skipping.
+----------
+dt3 was updated. New table below.
+
+------------------------
+                via     
+   D3 |    1     2    3 
+------|-----------------
+     1|   32     8   999
+dest 2|   71     7   999
+     3|  999   999     0
+------------------------
+dt3update mincosts3: 7 8 7 0 
+dt3update sending out new min costs.
+    TOLAYER2: source: 3, dest: 0
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 12.690587
+            INSERTEVENT: future time will be 14.147664
+    TOLAYER2: source: 3, dest: 1
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 12.690587
+            INSERTEVENT: future time will be 13.942923
+    TOLAYER2: source: 3, dest: 2
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 12.690587
+            INSERTEVENT: future time will be 13.872228
+MAIN: rcv event, t=13.299, at 0 src: 1, dest: 0, contents:   1   0  15   8
+----------
+rtupdate0 srcid: 1
+rtupdate0 destid: 0
+rtupdate0 mincosts: 1 0 15 8 
+----------
+i 0 matches NODE_ID 0. Skipping.
+i 1 matches sourceid 1. Skipping.
+dt0.costs[i][srcid]: 40
+connectcosts0[srcid]: 1
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 16
+dt0.costs[i][srcid]: 9
+connectcosts0[srcid]: 1
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 9
+----------
+dt0 was updated. New table below.
+
+------------------------
+                via     
+   D0 |    1     2    3 
+------|-----------------
+     1|    1   999    15
+dest 2|   16   999    14
+     3|    9   999     7
+------------------------
+dt0update mincosts0: 0 1 14 7 
+dt0update sending out new min costs.
+    TOLAYER2: source: 0, dest: 1
+              costs:0  1  14  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 13.298935
+            INSERTEVENT: future time will be 15.808719
+    TOLAYER2: source: 0, dest: 3
+              costs:0  1  14  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 13.298935
+            INSERTEVENT: future time will be 15.045259
+MAIN: rcv event, t=13.363, at 1 src: 0, dest: 1, contents:   0   1  14   7
+----------
+rtupdate1 srcid: 0
+rtupdate1 destid: 1
+rtupdate1 mincosts: 0 1 14 7 
+----------
+i 0 matches sourceid 0. Skipping.
+i 1 matches NODE_ID 1. Skipping.
+dt1.costs[i][srcid]: 15
+connectcosts1[srcid]: 1
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 15
+dt1.costs[i][srcid]: 8
+connectcosts1[srcid]: 1
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 8
+----------
+MAIN: rcv event, t=13.412, at 1 src: 3, dest: 1, contents:   7   8   7   0
+----------
+rtupdate1 srcid: 3
+rtupdate1 destid: 1
+rtupdate1 mincosts: 7 8 7 0 
+----------
+dt1.costs[i][srcid]: 39
+connectcosts1[srcid]: 32
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 39
+i 1 matches NODE_ID 1. Skipping.
+dt1.costs[i][srcid]: 39
+connectcosts1[srcid]: 32
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 39
+i 3 matches sourceid 3. Skipping.
+----------
+MAIN: rcv event, t=13.526, at 1 src: 0, dest: 1, contents:   0   1  14   7
+----------
+rtupdate1 srcid: 0
+rtupdate1 destid: 1
+rtupdate1 mincosts: 0 1 14 7 
+----------
+i 0 matches sourceid 0. Skipping.
+i 1 matches NODE_ID 1. Skipping.
+dt1.costs[i][srcid]: 15
+connectcosts1[srcid]: 1
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 15
+dt1.costs[i][srcid]: 8
+connectcosts1[srcid]: 1
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 8
+----------
+MAIN: rcv event, t=13.640, at 3 src: 1, dest: 3, contents:   1   0  39   8
+----------
+rtupdate3 srcid: 1
+rtupdate3 destid: 3
+rtupdate3 mincosts: 1 0 39 8 
+----------
+dt3.costs[i][srcid]: 33
+connectcosts3[srcid]: 32
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 33
+i 1 matches sourceid 1. Skipping.
+dt3.costs[i][srcid]: 71
+connectcosts3[srcid]: 32
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 71
+i 3 matches NODE_ID 3. Skipping.
+----------
+MAIN: rcv event, t=13.808, at 3 src: 1, dest: 3, contents:   1   0  15   8
+----------
+rtupdate3 srcid: 1
+rtupdate3 destid: 3
+rtupdate3 mincosts: 1 0 15 8 
+----------
+dt3.costs[i][srcid]: 33
+connectcosts3[srcid]: 32
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 33
+i 1 matches sourceid 1. Skipping.
+dt3.costs[i][srcid]: 71
+connectcosts3[srcid]: 32
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 47
+i 3 matches NODE_ID 3. Skipping.
+----------
+dt3 was updated. New table below.
+
+------------------------
+                via     
+   D3 |    1     2    3 
+------|-----------------
+     1|   32     8   999
+dest 2|   47     7   999
+     3|  999   999     0
+------------------------
+dt3update mincosts3: 7 8 7 0 
+dt3update sending out new min costs.
+    TOLAYER2: source: 3, dest: 0
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 13.808315
+            INSERTEVENT: future time will be 15.507415
+    TOLAYER2: source: 3, dest: 1
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 13.808315
+            INSERTEVENT: future time will be 17.638222
+    TOLAYER2: source: 3, dest: 2
+              costs:7  8  7  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 13.808315
+            INSERTEVENT: future time will be 15.630179
+MAIN: rcv event, t=13.872, at 2 src: 3, dest: 2, contents:   7   8   7   0
+----------
+rtupdate2 srcid: 3
+rtupdate2 destid: 2
+rtupdate2 mincosts: 7 8 7 0 
+----------
+dt2.costs[i][srcid]: 14
+connectcosts2[srcid]: 7
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 14
+dt2.costs[i][srcid]: 15
+connectcosts2[srcid]: 7
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 15
+i 2 matches NODE_ID 2. Skipping.
+i 3 matches sourceid 3. Skipping.
+----------
+MAIN: rcv event, t=13.943, at 1 src: 3, dest: 1, contents:   7   8   7   0
+----------
+rtupdate1 srcid: 3
+rtupdate1 destid: 1
+rtupdate1 mincosts: 7 8 7 0 
+----------
+dt1.costs[i][srcid]: 39
+connectcosts1[srcid]: 32
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 39
+i 1 matches NODE_ID 1. Skipping.
+dt1.costs[i][srcid]: 39
+connectcosts1[srcid]: 32
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 39
+i 3 matches sourceid 3. Skipping.
+----------
+MAIN: rcv event, t=14.148, at 0 src: 3, dest: 0, contents:   7   8   7   0
+----------
+rtupdate0 srcid: 3
+rtupdate0 destid: 0
+rtupdate0 mincosts: 7 8 7 0 
+----------
+i 0 matches NODE_ID 0. Skipping.
+dt0.costs[i][srcid]: 15
+connectcosts0[srcid]: 7
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 15
+dt0.costs[i][srcid]: 14
+connectcosts0[srcid]: 7
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 14
+i 3 matches sourceid 3. Skipping.
+----------
+MAIN: rcv event, t=14.454, at 3 src: 0, dest: 3, contents:   0   1  14   7
+----------
+rtupdate3 srcid: 0
+rtupdate3 destid: 3
+rtupdate3 mincosts: 0 1 14 7 
+----------
+i 0 matches sourceid 0. Skipping.
+dt3.costs[i][srcid]: 8
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 8
+dt3.costs[i][srcid]: 21
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 21
+i 3 matches NODE_ID 3. Skipping.
+----------
+MAIN: rcv event, t=15.045, at 3 src: 0, dest: 3, contents:   0   1  14   7
+----------
+rtupdate3 srcid: 0
+rtupdate3 destid: 3
+rtupdate3 mincosts: 0 1 14 7 
+----------
+i 0 matches sourceid 0. Skipping.
+dt3.costs[i][srcid]: 8
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 8
+dt3.costs[i][srcid]: 21
+connectcosts3[srcid]: 7
+connectcosts3[srcid] + rcvdpkt->mincost[i]: 21
+i 3 matches NODE_ID 3. Skipping.
+----------
+MAIN: rcv event, t=15.507, at 0 src: 3, dest: 0, contents:   7   8   7   0
+----------
+rtupdate0 srcid: 3
+rtupdate0 destid: 0
+rtupdate0 mincosts: 7 8 7 0 
+----------
+i 0 matches NODE_ID 0. Skipping.
+dt0.costs[i][srcid]: 15
+connectcosts0[srcid]: 7
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 15
+dt0.costs[i][srcid]: 14
+connectcosts0[srcid]: 7
+connectcosts0[srcid] + rcvdpkt->mincost[i]: 14
+i 3 matches sourceid 3. Skipping.
+----------
+MAIN: rcv event, t=15.630, at 2 src: 3, dest: 2, contents:   7   8   7   0
+----------
+rtupdate2 srcid: 3
+rtupdate2 destid: 2
+rtupdate2 mincosts: 7 8 7 0 
+----------
+dt2.costs[i][srcid]: 14
+connectcosts2[srcid]: 7
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 14
+dt2.costs[i][srcid]: 15
+connectcosts2[srcid]: 7
+connectcosts2[srcid] + rcvdpkt->mincost[i]: 15
+i 2 matches NODE_ID 2. Skipping.
+i 3 matches sourceid 3. Skipping.
+----------
+MAIN: rcv event, t=15.809, at 1 src: 0, dest: 1, contents:   0   1  14   7
+----------
+rtupdate1 srcid: 0
+rtupdate1 destid: 1
+rtupdate1 mincosts: 0 1 14 7 
+----------
+i 0 matches sourceid 0. Skipping.
+i 1 matches NODE_ID 1. Skipping.
+dt1.costs[i][srcid]: 15
+connectcosts1[srcid]: 1
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 15
+dt1.costs[i][srcid]: 8
+connectcosts1[srcid]: 1
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 8
+----------
+MAIN: rcv event, t=17.638, at 1 src: 3, dest: 1, contents:   7   8   7   0
+----------
+rtupdate1 srcid: 3
+rtupdate1 destid: 1
+rtupdate1 mincosts: 7 8 7 0 
+----------
+dt1.costs[i][srcid]: 39
+connectcosts1[srcid]: 32
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 39
+i 1 matches NODE_ID 1. Skipping.
+dt1.costs[i][srcid]: 39
+connectcosts1[srcid]: 32
+connectcosts1[srcid] + rcvdpkt->mincost[i]: 39
+i 3 matches sourceid 3. Skipping.
+----------
+------------------------
+                via     
+   D0 |    1     2    3 
+------|-----------------
+     1|    1   999    15
+dest 2|   16   999    14
+     3|    9   999     7
+------------------------
+------------------------
+                via     
+   D1 |    1     2    3 
+------|-----------------
+     1|    0   999   999
+dest 2|  999    54    39
+     3|  999    61    32
+------------------------
+------------------------
+                via     
+   D2 |    1     2    3 
+------|-----------------
+     1|   54   999    15
+dest 2|  999     0   999
+     3|   62   999     7
+------------------------
+------------------------
+                via     
+   D3 |    1     2    3 
+------|-----------------
+     1|   32     8   999
+dest 2|   47     7   999
+     3|  999   999     0
+------------------------
+
+Simulator terminated at t=17.638222, no packets in medium

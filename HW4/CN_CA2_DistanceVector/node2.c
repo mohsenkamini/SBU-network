@@ -7,9 +7,8 @@
 
 #define NODE_ID 2
 
-
 // Link costs to directly connected neighbours used for initializing the distance table.
-int connectcosts2[4] = { 0, 1, 999, 7 };
+int connectcosts2[4] = { 999, 54, 0, 7 };
 
 // Minimum costs to all nodes, initially set to same as connectcosts
 int mincosts2[4] = { 0, 1, 999, 7 };
@@ -152,7 +151,7 @@ void rtupdate2(struct rtpkt *rcvdpkt) {
 void printdt2() {
     printf("------------------------\n");
     printf("                via     \n");
-    printf("   D0 |    1     2    3 \n");
+    printf("   D2 |    1     2    3 \n");
     printf("------|-----------------\n");
     printf("     1|  %3d   %3d   %3d\n", dt2.costs[1][1], dt2.costs[1][2], dt2.costs[1][3]);
     printf("dest 2|  %3d   %3d   %3d\n", dt2.costs[2][1], dt2.costs[2][2], dt2.costs[2][3]);
